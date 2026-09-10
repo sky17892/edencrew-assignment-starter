@@ -22,23 +22,27 @@ class AppDimens extends ThemeExtension<AppDimens> {
     required this.iconMd,
     required this.rowMinHeight,
     required this.tabBarHeight,
+    required this.width,
+    required this.height,
   });
 
   const AppDimens.standard()
-      : space1 = 4,
-        space2 = 8,
-        space3 = 12,
-        space4 = 16,
-        space5 = 20,
-        space6 = 24,
-        radiusSm = 4,
-        radiusMd = 8,
-        radiusLg = 12,
-        borderHairline = 1,
-        iconSm = 16,
-        iconMd = 20,
-        rowMinHeight = 56,
-        tabBarHeight = 56;
+    : space1 = 4,
+      space2 = 8,
+      space3 = 12,
+      space4 = 16,
+      space5 = 20,
+      space6 = 24,
+      radiusSm = 4,
+      radiusMd = 8,
+      radiusLg = 12,
+      borderHairline = 1,
+      iconSm = 16,
+      iconMd = 20,
+      rowMinHeight = 56,
+      tabBarHeight = 56,
+      width = 393,
+      height = 852;
 
   final double space1;
   final double space2;
@@ -62,6 +66,10 @@ class AppDimens extends ThemeExtension<AppDimens> {
   /// 하단 탭 바의 높이입니다.
   final double tabBarHeight;
 
+  // 길이와 넓이를 추가!
+  final double width;
+  final double height;
+
   @override
   AppDimens copyWith({
     double? space1,
@@ -78,6 +86,8 @@ class AppDimens extends ThemeExtension<AppDimens> {
     double? iconMd,
     double? rowMinHeight,
     double? tabBarHeight,
+    double? width,
+    double? height,
   }) {
     return AppDimens(
       space1: space1 ?? this.space1,
@@ -94,6 +104,8 @@ class AppDimens extends ThemeExtension<AppDimens> {
       iconMd: iconMd ?? this.iconMd,
       rowMinHeight: rowMinHeight ?? this.rowMinHeight,
       tabBarHeight: tabBarHeight ?? this.tabBarHeight,
+      width: width ?? this.width,
+      height: height ?? this.height,
     );
   }
 
@@ -115,6 +127,8 @@ class AppDimens extends ThemeExtension<AppDimens> {
       iconMd: lerpDouble(iconMd, other.iconMd, t)!,
       rowMinHeight: lerpDouble(rowMinHeight, other.rowMinHeight, t)!,
       tabBarHeight: lerpDouble(tabBarHeight, other.tabBarHeight, t)!,
+      width: lerpDouble(width, other.width, t)!,
+      height: lerpDouble(height, other.height, t)!,
     );
   }
 }

@@ -1,0 +1,32 @@
+{
+  "query": "삼성전자",
+  "items": [
+    {
+      "code": "005930",
+      "name": "삼성전자",
+      "typeCode": "stock",
+      "typeName": "주식",
+      "url": "/item/main.naver?code=005930",
+      "nationCode": "KOR",
+      "category": "KOSPI"
+    },
+    {
+      "code": "000660",
+      "name": "SK하이닉스",
+      "typeCode": "stock",
+      "typeName": "주식",
+      "url": "/item/main.naver?code=000660",
+      "nationCode": "KOR",
+      "category": "KOSPI"
+    },
+    {
+      "code": "AAPL",
+      "name": "Apple",
+      "typeCode": "stock",
+      "typeName": "주식",
+      "url": "/item/main.naver?code=AAPL",
+      "nationCode": "USA",
+      "category": "NASDAQ"
+    }
+  ]
+}

@@ -1,3 +1,4 @@
+import 'package:edencrew_assignment_starter/main.dart';
 import 'package:flutter/material.dart';
 
 import 'app_colors.dart';
@@ -21,6 +22,8 @@ abstract final class AppTheme {
   static ThemeData get dark {
     const AppColors colors = AppColors.dark();
     const AppDimens dimens = AppDimens.standard();
+
+    //MaterialApp(theme: AppTheme.dark, home: const likeitem());
 
     return ThemeData(
       useMaterial3: true,
@@ -46,6 +49,9 @@ abstract final class AppTheme {
 /// Text('삼성전자', style: TextStyle(color: context.colors.textPrimary))
 /// SizedBox(height: context.dimens.space4)
 /// ```
+//Text('삼성전자', style: TextStyle(color: context.colors.textPrimary));
+//SizedBox(height: context.dimens.space4);
+
 extension AppThemeContext on BuildContext {
   AppColors get colors =>
       Theme.of(this).extension<AppColors>() ?? const AppColors.dark();

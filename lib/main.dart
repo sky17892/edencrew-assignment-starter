@@ -12,9 +12,9 @@ class EdencrewAssignmentApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: '이든크루 평가 과제',
+      //   title: '이든크루 평가 과제',
       theme: AppTheme.dark,
-      home: const StartHereScreen(),
+      home: const likeitem(),
     );
   }
 }
@@ -22,7 +22,7 @@ class EdencrewAssignmentApp extends StatelessWidget {
 /// 과제 시작점입니다. 이 화면은 지우고 직접 구현한 화면으로 바꿔 주세요.
 ///
 /// 디자인 토큰을 어떻게 꺼내 쓰는지 보여주는 예시이기도 합니다.
-class StartHereScreen extends StatelessWidget {
+/*class StartHereScreen extends StatelessWidget {
   const StartHereScreen({super.key});
 
   @override
@@ -77,6 +77,47 @@ class StartHereScreen extends StatelessWidget {
                     color: colors.accentDefault,
                     fontSize: 13,
                     fontWeight: AppTypography.medium,
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}*/
+class likeitem extends StatelessWidget {
+  const likeitem({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    final AppColors colors = context.colors;
+    final AppDimens dimens = context.dimens;
+
+    return Scaffold(
+      body: SafeArea(
+        child: Padding(
+          padding: EdgeInsets.all(dimens.space5),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              //Text('삼성전자', style: TextStyle(color: context.colors.textPrimary)),
+              //SizedBox(width: dimens.space4),
+              Text('삼성전자', style: TextStyle(color: context.colors.textPrimary)),
+              SizedBox(height: context.dimens.space4),
+              Container(
+                padding: EdgeInsets.symmetric(
+                  horizontal: dimens.space3,
+                  vertical: dimens.space2,
+                ),
+                decoration: BoxDecoration(
+                  color: colors.accentBg,
+                  borderRadius: BorderRadius.circular(dimens.radiusMd),
+                  border: Border.all(
+                    color: colors.borderSubtle,
+                    width: dimens.borderHairline,
                   ),
                 ),
               ),
